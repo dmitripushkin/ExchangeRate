@@ -56,15 +56,71 @@
 		BFA66CCE2704F9B700CAE014 /* ExchangeRate */ = {
 			isa = PBXGroup;
 			children = (
-				BFA66CCF2704F9B700CAE014 /* AppDelegate.swift */,
-				BFA66CD12704F9B700CAE014 /* SceneDelegate.swift */,
-				BFA66CD32704F9B700CAE014 /* ViewController.swift */,
-				BFA66CD52704F9B700CAE014 /* Main.storyboard */,
-				BFA66CD82704F9B800CAE014 /* Assets.xcassets */,
-				BFA66CDA2704F9B800CAE014 /* LaunchScreen.storyboard */,
-				BFA66CDD2704F9B800CAE014 /* Info.plist */,
+				BFA66CE72704FA9100CAE014 /* Models */,
+				BFA66CE42704FA5F00CAE014 /* ViewControllers */,
+				BFA66CE92704FAB500CAE014 /* Views */,
+				BFA66CE82704FA9F00CAE014 /* Services */,
+				BFA66CE32704FA4A00CAE014 /* SupportingFiles */,
+				BFA66CE52704FA6F00CAE014 /* Storyboards */,
+				BFA66CE62704FA8100CAE014 /* Sources */,
 			);
 			path = ExchangeRate;
+			sourceTree = "<group>";
+		};
+		BFA66CE32704FA4A00CAE014 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				BFA66CCF2704F9B700CAE014 /* AppDelegate.swift */,
+				BFA66CD12704F9B700CAE014 /* SceneDelegate.swift */,
+				BFA66CDD2704F9B800CAE014 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		BFA66CE42704FA5F00CAE014 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFA66CD32704F9B700CAE014 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BFA66CE52704FA6F00CAE014 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BFA66CD52704F9B700CAE014 /* Main.storyboard */,
+				BFA66CDA2704F9B800CAE014 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BFA66CE62704FA8100CAE014 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BFA66CD82704F9B800CAE014 /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BFA66CE72704FA9100CAE014 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BFA66CE82704FA9F00CAE014 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BFA66CE92704FAB500CAE014 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ExchangeRate/Info.plist;
+				INFOPLIST_FILE = ExchangeRate/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -305,7 +361,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,7 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ExchangeRate/Info.plist;
+				INFOPLIST_FILE = ExchangeRate/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -332,7 +388,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
