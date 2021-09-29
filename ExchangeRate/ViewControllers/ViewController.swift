@@ -15,22 +15,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonTaped(_ sender: Any) {
-        guard let url = URL(string: Link.exchangeRateApi.rawValue) else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
-            }
-            
-            do {
-                let rate = try JSONDecoder().decode(ExchangeRate.self, from: data)
+        NetworkManager.shared.fetch(dataType: ExchangeRate.self, from: Link.exchangeRateApi.rawValue) {
+            result in
+            switch result {
+            case .success(let rate):
                 print(rate)
-            } catch let error {
-                print(error.localizedDescription)
+            case .failure(let error):
+                print(error)
             }
-             
-        }.resume()
+        }
         
     }
     
