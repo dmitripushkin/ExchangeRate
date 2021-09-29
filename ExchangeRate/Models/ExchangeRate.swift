@@ -8,23 +8,33 @@
 import Foundation
 
 struct ExchangeRate: Decodable {
-    let currentDate: String
-    let previousDate: String
-    let previousURL: String
-    let valute: [Valute]
+    let date: String
+    let valute: [String: Valute]
+    
+    enum CodingKeys: String, CodingKey {
+        case date = "Date"
+        case valute = "Valute"
+    }
 }
 
 struct Valute: Decodable {
-    let abbreviation: String
-    let info: [Info]
-}
-
-struct Info: Decodable {
-    let numCode: String
-    let charCode: String
-    let nominal: String
-    let name: String
-    let value: String
+    let id: String?
+    let numCode: String?
+    let charCode: String?
+    let nominal: Int?
+    let name: String?
+    let value: Double?
+    let previous: Double?
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "ID"
+        case numCode = "NumCode"
+        case charCode = "CharCode"
+        case nominal = "Nominal"
+        case name = "Name"
+        case value = "Value"
+        case previous = "Previousz"
+    }
 }
 
 enum Link: String {
