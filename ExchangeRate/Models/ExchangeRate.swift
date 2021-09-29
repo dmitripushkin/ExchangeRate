@@ -18,13 +18,13 @@ struct ExchangeRate: Decodable {
 }
 
 struct Valute: Decodable {
-    let id: String?
-    let numCode: String?
-    let charCode: String?
-    let nominal: Int?
-    let name: String?
-    let value: Double?
-    let previous: Double?
+    let id: String
+    let numCode: String
+    let charCode: String
+    let nominal: Int
+    let name: String
+    let value: Double
+    let previous: Double
     
     enum CodingKeys: String, CodingKey {
         case id = "ID"
@@ -33,7 +33,7 @@ struct Valute: Decodable {
         case nominal = "Nominal"
         case name = "Name"
         case value = "Value"
-        case previous = "Previousz"
+        case previous = "Previous"
     }
 }
 
