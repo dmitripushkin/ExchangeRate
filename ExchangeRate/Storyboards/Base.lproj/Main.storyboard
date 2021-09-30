@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExchangeRate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="ExchangeRate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,6 +22,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Get JSON"/>
                                 <connections>
                                     <action selector="buttonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G6r-ME-0ho"/>
+                                    <segue destination="asI-c5-WcU" kind="presentation" modalPresentationStyle="fullScreen" id="B7t-F2-U5B"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -36,6 +37,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-23" y="52"/>
+        </scene>
+        <!--Exchange Rate Table View Controller-->
+        <scene sceneID="Ip0-Ri-36n">
+            <objects>
+                <tableViewController id="asI-c5-WcU" customClass="ExchangeRateTableViewController" customModule="ExchangeRate" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2U4-LK-I9u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="TQZ-g1-Be7">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TQZ-g1-Be7" id="8Q9-DZ-Fkr" customClass="RateViewCell" customModule="ExchangeRate" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="GYK-xJ-k2A">
+                                            <rect key="frame" x="43.5" y="11.5" width="327.5" height="20.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nominal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqY-Lo-sIg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="62.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAT-mO-0gZ">
+                                                    <rect key="frame" x="132.5" y="0.0" width="62.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbd-vP-bc9">
+                                                    <rect key="frame" x="265" y="0.0" width="62.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GYK-xJ-k2A" firstAttribute="width" secondItem="8Q9-DZ-Fkr" secondAttribute="width" multiplier="0.791063" id="Jnp-mC-ihe"/>
+                                        <constraint firstItem="GYK-xJ-k2A" firstAttribute="centerX" secondItem="8Q9-DZ-Fkr" secondAttribute="centerX" id="Zs3-fI-lEz"/>
+                                        <constraint firstItem="GYK-xJ-k2A" firstAttribute="centerY" secondItem="8Q9-DZ-Fkr" secondAttribute="centerY" id="wiu-ui-zH4"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="name" destination="EAT-mO-0gZ" id="CIZ-Bj-XYN"/>
+                                        <outlet property="nominal" destination="YqY-Lo-sIg" id="w1N-V7-IiN"/>
+                                        <outlet property="rate" destination="Qbd-vP-bc9" id="zvO-xg-2eG"/>
+                                    </connections>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="asI-c5-WcU" id="cYr-ob-Flv"/>
+                            <outlet property="delegate" destination="asI-c5-WcU" id="6bv-iB-eyg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3E-uS-tej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807" y="52"/>
         </scene>
     </scenes>
     <resources>
