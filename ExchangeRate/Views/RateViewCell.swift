@@ -8,7 +8,6 @@
 import UIKit
 
 class RateViewCell: UITableViewCell {
-    @IBOutlet var nominal: UILabel!
-    @IBOutlet var name: UILabel!
-    @IBOutlet var rate: UILabel!
+   
+    
 }
